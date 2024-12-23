@@ -123,6 +123,7 @@ body {
   font-size: 1.2rem;
 }
 
+
 .carousel-container {
   overflow: hidden;
   width: 80%;
@@ -181,4 +182,36 @@ button {
     font-size: 18px;
     padding: 8px 12px;
   }
+
+/* counter part css */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-item span {
+    color: white;
+}
+
+.countdown-item span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.countdown-item .labels {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 5px;
 }
