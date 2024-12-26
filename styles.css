@@ -1,37 +1,53 @@
 body {
   width: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Lato";
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-image: url('Images/bg.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 }
 
 .header {
-  padding: 50px;
-  padding-top: 1rem;
-  padding-left: 15rem;
+  display: flex; 
+  align-items: center; 
+  padding: 20px;
   background-color: #f4f4f4;
   text-align: left;
 }
 
+.header .header-image {
+  width: 100px; 
+  height: auto; 
+  margin-right: 20px;
+}
+
 .header .logo {
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 900;
   color: #333;
 }
 
 .header .tagline {
   font-size: 0.8em;
   color: #555;
+  font-weight: 400;
+}
+
+.header-content {
+  flex: 1; /* Let the text take up remaining space */
 }
 
 .navbar {
-  background-color: #d4a851;
+  background-color: #1F2D36;
   padding: 10px 0;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
+  font-weight: 700;
 }
 
 .nav-links {
@@ -41,7 +57,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
 .nav-links li {
@@ -54,8 +69,7 @@ body {
   text-decoration: none;
   color: #fff;
   padding: 8px 15px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 .nav-links a:last-child {
@@ -63,13 +77,13 @@ body {
 }
 
 .nav-links a:hover {
-  background-color: #575757;
+  background-color: #B19359;
+  text-decoration: none;
 }
 
 .partition {
   display: flex;
   width: 100%;
-  margin-top: 20px;
 }
 
 .left-section {
@@ -80,18 +94,24 @@ body {
   align-items: center;
   padding: 20px;
   text-align: left;
+  margin-left: -80px;
 }
 
 .left-section b {
   padding-left: 5%;
-  padding-bottom: 0.5rem;
+  padding-bottom: 20px;
   display: block;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 .left-section p {
-  padding-left: 5%;
-  padding-bottom: 0.5rem;
+  margin-top: 20px;
+  padding-left: 110px;
+  padding-right: 150px;
   display: block;
+  font-weight: 400;
+  font-size:large;
 }
 
 .left-section img {
@@ -100,27 +120,52 @@ body {
   display: block;
   padding-left: 5%;
 }
+a {
+  color: #007BFF; 
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline; 
+}
 
 .right-section {
   width: 20%;
   flex: 0 0 26%;
   padding: 10px;
+  padding-right: 50px;
   text-align: left;
 }
 
-.right-section b {
-  padding-left: 5%;
-  padding-top: 5%;
-  padding-bottom: 0.5rem;
-  display: block;
-  font-size: 1.5rem;
+.important-dates-box {
+  background-color: #1F2D36; 
+  padding: 20px;           
+  margin: 20px 0;          
+  border-radius: 8px;       
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-.title {
-  padding-left: 5%;
-  padding-top: 5%;
-  display: block;
+.important-dates-box b {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #CBAA67;
+}
+
+.important-dates-box .title {
   font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #ffffff; 
+}
+
+.important-dates-box ul {
+  padding-left: 20px; 
+  margin-bottom: 10px;
+}
+
+.important-dates-box li {
+  font-weight: 400;
+  color: #838383; 
 }
 
 
@@ -130,6 +175,8 @@ body {
   max-width: 800px;
   height: 400px;
   position: relative;
+  margin-left: -80px;
+
 }
 
 .carousel {
@@ -184,13 +231,12 @@ button {
   }
 }
 
-/* counter part css */
 .countdown {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #1F2D36; 
     border-radius: 10px;
     max-width: 600px;
     margin: 20px auto;
@@ -203,7 +249,7 @@ button {
 }
 
 .countdown-item span {
-    color: white;
+    color: #CBAA67;
 }
 
 .countdown-item span:first-child {
@@ -215,4 +261,9 @@ button {
     font-size: 0.9rem;
     text-transform: uppercase;
     margin-top: 5px;
+}
+#days,#hours,#minutes,#seconds {
+  color: #ffffff; /* Set text color */
+  font-weight: bold; /* Optional: Add bold text */
+  font-size: 2rem; /* Optional: Adjust font size */
 }

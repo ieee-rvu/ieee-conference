@@ -15,23 +15,26 @@ body {
 }
 
 .carousel-container {
-  overflow: hidden;
-  width: 90%;
-  max-width: 800px;
-  height: 400px;
-  position: relative;
+  overflow: hidden; 
+  width: 100%; 
+  max-width: 800px; 
+  height: 400px; 
+  position: relative; 
 }
 
 .carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  display: flex; 
+  transition: transform 0.8s ease-in-out;
 }
 
 .carousel img {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
+  width: 100%; 
+  flex-shrink: 0; 
+  object-fit: cover; 
+  height: 100%; 
 }
+
+
 
 button {
   position: absolute;
@@ -56,7 +59,6 @@ button {
   right: 5px;
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
   .carousel-container {
     height: 300px;
