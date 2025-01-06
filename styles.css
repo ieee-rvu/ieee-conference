@@ -16,21 +16,42 @@ body {
   padding: 20px;
   background-color: #f4f4f4;
   text-align: left;
+  /* justify-content: flex-start; */
+  justify-content: space-between; 
 }
 
-.header .header-image {
+.header-ieee-logo-and-text {
+  display: flex;
+  align-items: center;
+}
+
+
+.class-tagline {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .header-image-rvu {
+  
+  width: 170px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.header .header-image-ieee {
+  
   width: 100px;
   height: auto;
   margin-right: 20px;
 }
 
-.header .logo {
+.header .header-ieee-logo-and-text .main-tagline {
   font-size: 1em;
   font-weight: 900;
   color: #333;
 }
 
-.header .tagline {
+.header .header-ieee-logo-and-text .tagline {
   font-size: 0.8em;
   color: #555;
   font-weight: 400;
