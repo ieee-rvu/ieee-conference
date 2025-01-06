@@ -1,6 +1,6 @@
 const carousel = document.querySelector('.carousel');
-const nextButton = document.querySelector('.next-button');
-const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('#next-button');
+const prevButton = document.querySelector('#prev-button');
 
 const folderPath = './Images/'; 
 const imagePrefix = 'i'; 

@@ -83,6 +83,7 @@ body {
 .nav-links li {
   display: inline;
   margin: 0px;
+  padding-inline: 25px;
   /* padding: 0.1 rem;  */
 }
 
@@ -100,6 +101,65 @@ body {
 .nav-links a:hover {
   background-color: #b19359;
   text-decoration: none;
+}
+
+.banner {
+  background-image: url('Images/rvu-banner.jpg');
+  width: 100%;
+  height: 600px;
+  /* height: auto; */
+  /* gap:60px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.banner .logo-area {
+  display: flex;
+  gap: 60px;
+}
+
+.banner .text-area {
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.7); /* Translucent background */
+  border-radius: 10px; /* Rounded corners for the background */
+  padding: 10px; /* Space around the logo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for the translucent box */
+}
+
+.banner-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-buttons button {
+  position: relative;
+  margin: 0 100px;
+  padding: 10px 50px;
+  border-radius: 20px;
+  background-color: rgb(210, 168, 93);
+  font-weight: bolder;
+}
+
+.banner-buttons button:hover {
+  cursor: pointer;
+}
+
+
+.logo-container {
+  background-color: rgba(255, 255, 255, 0.7); /* Translucent background */
+  border-radius: 10px; /* Rounded corners for the background */
+  padding: 10px; /* Space around the logo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for the translucent box */
+}
+
+.logo-container img {
+  max-width: 300px; /* Limit logo width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .partition {
@@ -214,7 +274,7 @@ a:hover {
   object-fit: cover;
 }
 
-button {
+.carousel-button {
   position: absolute;
   border-radius: 50%;
   top: 50%;
@@ -228,11 +288,11 @@ button {
   font-size: 24px;
 }
 
-.prev-button {
+#prev-button {
   left: 10px;
 }
 
-.next-button {
+#next-button {
   right: 10px;
 }
 
