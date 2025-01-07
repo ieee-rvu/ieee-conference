@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: auto;
+}
+
+/* Logo and text */
+.logo-text {
+  padding: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rvu-logo {
+  width: 250px;
+}
+.rvu-ieee-logo {
+  width: 140px;
+}
+.right_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-tagline {
+  font-size: 1em;
+  font-weight: 700;
+  color: #333;
+}
+.tagline {
+  font-size: 0.8em;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1F2D36;
+  color: white;
+  padding: 10px 120px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-rvu-ieee-text {
+  display: none;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Navbar Links */
+.navbar-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.navbar-links .nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  border: 1px solid #1F2D36;
+  border-radius: 5px;
+  padding: 4px 6px;
+  transition: 0.2s ease-out;
+  font-weight: 500;
+}
+.nav-item > a {
+  width: 100%;
+}
+.navbar-links .nav-item a:hover {
+  background: #D5B173;
+  color: white;
+}
+
+/* Main content */
+.banner {
+  width: 100%;
+  height: 595px;
+  background-image: url("../v2/rvu_banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.logo-layout {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.logo-box {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(255, 187, 0, 0.37);
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.10 );
+}
+
+/* Responsive Design */
+@media (max-width: 1260px) {
+  .logo-text {
+    padding: 0px 50px;
+  }
+  .rvu-logo {
+    width: 200px;
+  }
+  .rvu-ieee-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-rvu-ieee-text {
+    display: unset;
+  }
+  .nav-rvu-ieee-text > .main-tagline, .tagline {
+    color: white;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .navbar-links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: #1F2D36;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .navbar-links.show {
+    display: flex;
+  }
+  .navbar-links .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+  .nav-rvu-ieee-text {
+    display: unset; 
+  }
+  .nav-rvu-ieee-text > .main-tagline, .tagline {
+    color: white;
+  }
+  .logo-text {
+    padding: 0px 0px;
+  }
+  .rvu-logo {
+    width: 160px;
+  }
+  .rvu-ieee-logo {
+    display: unset;
+    width: 100px;
+  }
+  .rvu-ieee-text {
+    display: none;
+  }
+}
+
+
+/* Committee Page Styles */
+
+/* Style for the committee section */
+.committee-section {
+  /* margin-top: 10rem; */
+  text-align: center; /* Center the text */
+  margin: 0 auto; /* Center horizontally */
+  max-width: 800px; /* Optional: Limit the width */
+  margin-top: 40px; /* Space above the section */
+  margin-bottom: 25px; /* Space below the section */
+  position: relative; /* Allow background effects */
+  padding: 20px;
+  border-radius: 10px; 
+  /* Rounded corners for the section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  color: white; /* Default text color for the section */
+
+}
+
+
+
+/* Style for the heading */
+.committee-heading {
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold; /* Make the heading bold */
+  margin-bottom: 30px; /* Space below the heading */
+  color: #cbaa67; /* Gold color for the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a shadow for a 3D effect */
+}
+
+
+/* Scoped styles for committee page buttons */
+.button-container {
+  display: grid; /* Use a grid layout for buttons */
+  grid-template-columns: 1fr 1fr; /* Two buttons per row */
+  gap: 20px; /* Spacing between buttons */
+  justify-items: center; /* Align items horizontally in the center */
+  align-items: center; /* Align items vertically in the center */
+  max-width: 800px; /* Optional: Limit the container width */
+  margin: 0 auto; /* Center the container horizontally on the page */
+  padding: 20px;
+}
+
+
+/* Style for the buttons */
+.committee-button {
+  width: 250px; /* Rectangular shape: wider buttons */
+  height: 120px; /* Rectangular shape: taller buttons */
+  background-color: #1f2d36;
+  color: white;
+  border: none;
+  font-size: 18px; /* Text size */
+  font-weight: bold;
+  border-radius: 5px; /* Less rounded for a boxy look */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for committee buttons */
+.committee-button:hover {
+  background-color: #456485; /* Darker blue on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+@media (max-width: 768px) {
+  .committee-section {
+    margin-top: 18px; /* Increase margin for smaller screens if navbar height increases */
+  }
+
+  .committee-heading {
+    font-size: 1.8rem; /* Smaller font size for heading */
+  }
+
+  .button-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .committee-button {
+    width: 100%; /* Full-width buttons */
+    padding: 12px 8px; /* Adjust padding */
+    font-size: 14px; /* Smaller font for buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .committee-section {
+    margin-top: 20px; /* Further adjust margin for very small screens */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .committee-heading {
+    font-size: 1.6rem; /* Further reduce font size for very small screens */
+  }
+
+  .committee-button {
+    font-size: 12px; /* Further reduce button font size */
+    padding: 10px 6px; /* Adjust padding */
+  }
+}
+
+
+
+
+/* each commitee page css */
+
+/* Image gallery layout */
+.image-gallery {
+  display: flex; /* Flexbox for arranging cards in a row */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 2rem; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+  margin: 2rem auto; /* Add spacing around the gallery */
+  max-width: 1200px; /* Limit the maximum width of the gallery */
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  align-items: center; /* Center items vertically within the card */
+  flex-direction: row; /* Align image and text side by side */
+  max-width: 44rem; /* Maximum card width */
+  width: 100%; /* Full width of container */
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.02); /* Slightly enlarge the card on hover */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Card image styles */
+.card img {
+  width: 10rem; /* Image width (160px) */
+  height: 10rem; /* Image height matches width for circular shape */
+  border-radius: 50%; /* Make the image circular */
+  margin-right: 0.8rem;
+  border: 3px solid #ddd; /* Light border around the image */
+}
+
+/* Card description styles */
+.card-description {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  justify-content: center; /* Center text vertically */
+}
+
+.card-description h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: black;
+}
+
+.card-description p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center-align content */
+    text-align: center; /* Center-align text */
+  }
+
+  .card img {
+    margin-right: 0; /* Remove right margin when stacked vertically */
+    margin-bottom: 1rem; /* Add space below the image */
+  }
+
+  .card-description h3 {
+    font-size: 1.4rem; /* Slightly smaller heading font size */
+  }
+
+  .card-description p {
+    font-size: 0.9rem; /* Slightly smaller paragraph font size */
+  }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
+  .image-gallery {
+    gap: 1rem; /* Reduce spacing between cards */
+    padding: 0 1rem; /* Add padding for smaller screens */
+  }
+
+  .card {
+    padding: 0.8rem; /* Reduce padding inside the card */
+  }
+
+  .card img {
+    width: 8rem; /* Smaller image size for mobile screens */
+    height: 8rem; /* Ensure the image stays circular */
+  }
+
+  .card-description h3 {
+    font-size: 1.2rem; /* Reduce heading font size */
+  }
+
+  .card-description p {
+    font-size: 0.8rem; /* Reduce paragraph font size */
+  }
+}
