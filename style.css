@@ -237,12 +237,12 @@ body {
 
 /* Style for the buttons */
 .committee-button {
-  width: 250px; /* Rectangular shape: wider buttons */
-  height: 120px; /* Rectangular shape: taller buttons */
+  width: 200px; /* Updated: Reduced width */
+  height: 80px; /* Updated: Reduced height */
   background-color: #1f2d36;
   color: white;
   border: none;
-  font-size: 18px; /* Text size */
+  font-size: 16px; /* Updated: Slightly smaller text size */
   font-weight: bold;
   border-radius: 5px; /* Less rounded for a boxy look */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -253,7 +253,7 @@ body {
 /* Hover effect for committee buttons */
 .committee-button:hover {
   background-color: #456485; /* Darker blue on hover */
-  transform: scale(1.1); /* Slight zoom effect */
+  transform: scale(1.05); /* Updated: Slightly reduced zoom effect */
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
@@ -272,6 +272,7 @@ body {
 
   .committee-button {
     width: 100%; /* Full-width buttons */
+    height: 90px; /* Updated: Slightly taller buttons on smaller screens */
     padding: 12px 8px; /* Adjust padding */
     font-size: 14px; /* Smaller font for buttons */
   }
@@ -289,10 +290,10 @@ body {
 
   .committee-button {
     font-size: 12px; /* Further reduce button font size */
+    height: 80px; /* Updated: Match height to smaller buttons */
     padding: 10px 6px; /* Adjust padding */
   }
 }
-
 
 
 
