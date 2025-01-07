@@ -439,3 +439,55 @@ a:hover {
     height: auto; /* Maintain proportional size */
   }
 }
+
+
+
+/* each commitee page css */
+
+.image-gallery {
+  display: flex; /* Arranges child elements (cards) in a horizontal row */
+  flex-wrap: wrap; /* Allows cards to wrap to the next row if they exceed the container width */
+  gap: 2rem; /* Sets the spacing between cards */
+  justify-content: center; /* Centers the cards horizontally within the container */
+}
+
+.card {
+  display: flex; /* Aligns image and text horizontally within the card */
+  align-items: center; /* Aligns image and text vertically in the center */
+  justify-content: center; /* Positions content to start from the left */
+  max-width: 44rem; /* Maximum width of the entire card */
+  width: 100%; /* Ensures the card adapts to the container width */
+  background-color: #fff; /* Sets the card's background color to white */
+  padding: 1rem; /* Adds space inside the card */
+  border-radius: 0.625rem; /* Slightly rounded corners */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  gap: 1rem; /* Spacing between image and text */
+}
+
+.card img {
+  width: 10rem; /* Larger image size (160px) */
+  height: 10rem; /* Ensures height matches width for a perfect circle */
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 0.8rem; /* Minimal space between the image and the text */
+  border: 3px solid #ddd; /* Adds a light gray border around the image */
+}
+
+.card-description {
+  display: flex; /* Aligns text elements vertically in a column */
+  flex-direction: column; /* Ensures text elements stack vertically */
+  justify-content: center; /* Vertically centers the text within the card */
+}
+
+.card-description h3 {
+  margin: 0; /* Removes any default margin around the heading */
+  font-size: 1.6rem; /* Slightly larger font size for the heading (25.6px) */
+  font-weight: bold; /* Makes the heading text bold */
+  color: black; /* Sets the heading text color to black */
+}
+
+.card-description p {
+  font-size: 1rem; /* Font size for the paragraph (16px) */
+  color: #555; /* Sets the text color to a medium gray for readability */
+  margin-top: 0.3rem; /* Adds a small space between the heading and paragraph */
+  line-height: 1.4; /* Sets the line height to improve readability */
+}
