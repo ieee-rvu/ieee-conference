@@ -237,12 +237,14 @@ body {
 
 /* Style for the buttons */
 .committee-button {
-  width: 200px; /* Updated: Reduced width */
-  height: 80px; /* Updated: Reduced height */
+  width: 80%; /* Dynamic width based on screen size */
+  max-width: 300px; /* Optional: Limit maximum width */
+  height: auto; /* Let height adjust automatically for aspect ratio */
+  aspect-ratio: 5 / 2; /* Maintain rectangular ratio */
   background-color: #1f2d36;
   color: white;
   border: none;
-  font-size: 16px; /* Updated: Slightly smaller text size */
+  font-size: 18px; /* Text size */
   font-weight: bold;
   border-radius: 5px; /* Less rounded for a boxy look */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -253,8 +255,22 @@ body {
 /* Hover effect for committee buttons */
 .committee-button:hover {
   background-color: #456485; /* Darker blue on hover */
-  transform: scale(1.05); /* Updated: Slightly reduced zoom effect */
+  transform: scale(1.05); /* Slight zoom effect */
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Desktop or full-screen mode */
+@media (min-width: 1024px) {
+  .committee-button {
+    width: 300px; /* Increase width slightly for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    font-size: 20px; /* Larger font size for better visibility */
+    padding: 15px; /* Increase padding for a spacious look */
+  }
+
+  .button-container {
+    gap: 15px; /* Add spacing between buttons on desktop */
+  }
 }
 
 @media (max-width: 768px) {
@@ -268,13 +284,14 @@ body {
 
   .button-container {
     grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 10px; /* Add some spacing between buttons */
   }
 
   .committee-button {
-    width: 100%; /* Full-width buttons */
-    height: 90px; /* Updated: Slightly taller buttons on smaller screens */
-    padding: 12px 8px; /* Adjust padding */
-    font-size: 14px; /* Smaller font for buttons */
+    width: 90%; /* Full-width buttons with slight padding */
+    max-width: 300px; /* Optional: Limit maximum width for larger phones */
+    height: auto; /* Let height adjust automatically */
+    font-size: 16px; /* Slightly smaller font */
   }
 }
 
@@ -289,9 +306,11 @@ body {
   }
 
   .committee-button {
-    font-size: 12px; /* Further reduce button font size */
-    height: 80px; /* Updated: Match height to smaller buttons */
-    padding: 10px 6px; /* Adjust padding */
+    width: 100%; /* Buttons take full width of the screen */
+    max-width: 280px; /* Optional: Prevent excessive button size */
+    height: auto; /* Let height adjust based on width */
+    font-size: 14px; /* Smaller button font size */
+    padding: 8px; /* Reduce padding for a cleaner look */
   }
 }
 
