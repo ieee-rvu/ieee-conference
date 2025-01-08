@@ -345,6 +345,21 @@ a:hover {
   font-size: 2rem;
 }
 
+.content-one {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  /* background-color: red; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-one-right {
+  justify-self: right;
+}
+
 /* Responsive Design */
 @media (max-width: 1260px) {
   .logo-text {
