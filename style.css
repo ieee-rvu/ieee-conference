@@ -103,6 +103,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 30px;
 }
 .logo-layout {
   width: 100%;
@@ -111,7 +112,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 .logo-box {
   width: 300px;
@@ -358,6 +359,10 @@ a:hover {
 
 .content-one-right {
   justify-self: right;
+}
+
+.content-one-left p {
+  margin-top: 15px;
 }
 
 /* Responsive Design */
