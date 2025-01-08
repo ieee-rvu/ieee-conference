@@ -889,3 +889,24 @@ body {
 .card1:nth-child(even) > .info > .title::before {
   right: -45px;
 }
+
+
+.footer {
+  background-color: rgb(232, 232, 232);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer img {
+  height: 70px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #cbaa67;
+  margin-top: 3px;
+}
