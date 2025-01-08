@@ -1,100 +1,117 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.navbar-links');
+/* Responsive Navbar code */
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".navbar-links");
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+document.addEventListener("click", (event) => {
+  if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+    navLinks.classList.remove("show");
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    navLinks.classList.remove("show");
+  }
+});
 
-const carousel = document.querySelector('.carousel');
-const nextButton = document.querySelector('#next-button');
-const prevButton = document.querySelector('#prev-button');
 
-const folderPath = './Images/'; 
-const imagePrefix = 'i'; 
-const imageExtension = '.png'; 
-const totalImages = 5; 
+
+/* Image Carousel code */
+const carousel = document.querySelector(".carousel");
+const nextButton = document.querySelector("#next-button");
+const prevButton = document.querySelector("#prev-button");
+
+const folderPath = "./Images/";
+const imagePrefix = "i";
+const imageExtension = ".jpg";
+const totalImages = 5;
 
 let currentIndex = 0;
 let autoSlideInterval;
 
 function loadImages() {
-    const fragment = document.createDocumentFragment();
+  const fragment = document.createDocumentFragment();
 
-    const lastImage = document.createElement('img');
-    lastImage.src = `${folderPath}${imagePrefix}${totalImages}${imageExtension}`;
-    lastImage.style.width = '100%';
-    lastImage.style.objectFit = 'cover';
-    fragment.appendChild(lastImage);
+  const lastImage = document.createElement("img");
+  lastImage.src = `${folderPath}${imagePrefix}${totalImages}${imageExtension}`;
+  lastImage.alt = "IEEE SB images"
+  lastImage.style.width = "100%";
+  lastImage.style.objectFit = "cover";
+  fragment.appendChild(lastImage);
 
-    for (let i = 1; i <= totalImages; i++) {
-        const img = document.createElement('img');
-        img.src = `${folderPath}${imagePrefix}${i}${imageExtension}`;
-        img.style.width = '100%';
-        img.style.objectFit = 'cover';
-        fragment.appendChild(img);
-    }
+  for (let i = 1; i <= totalImages; i++) {
+    const img = document.createElement("img");
+    img.src = `${folderPath}${imagePrefix}${i}${imageExtension}`;
+    img.style.width = "100%";
+    img.style.objectFit = "cover";
+    fragment.appendChild(img);
+  }
 
-    const firstImage = document.createElement('img');
-    firstImage.src = `${folderPath}${imagePrefix}1${imageExtension}`;
-    firstImage.style.width = '100%';
-    firstImage.style.objectFit = 'cover';
-    fragment.appendChild(firstImage);
+  const firstImage = document.createElement("img");
+  firstImage.src = `${folderPath}${imagePrefix}1${imageExtension}`;
+  firstImage.alt = "IEEE SB images"
+  firstImage.style.width = "100%";
+  firstImage.style.objectFit = "cover";
+  fragment.appendChild(firstImage);
 
-    carousel.appendChild(fragment);
+  carousel.appendChild(fragment);
 
-    carousel.style.transform = `translateX(-100%)`;
+  carousel.style.transform = `translateX(-100%)`;
 }
 
 function updateCarousel() {
-    const offset = -(currentIndex + 1) * 100; 
-    carousel.style.transition = 'transform 0.8s ease-in-out';
-    carousel.style.transform = `translateX(${offset}%)`;
+  const offset = -(currentIndex + 1) * 100;
+  carousel.style.transition = "transform 0.8s ease-in-out";
+  carousel.style.transform = `translateX(${offset}%)`;
 }
 
 function nextImage() {
-    currentIndex++;
-    updateCarousel();
+  currentIndex++;
+  updateCarousel();
 
-    if (currentIndex >= totalImages) {
-        setTimeout(() => {
-            carousel.style.transition = 'none';
-            currentIndex = 0;
-            carousel.style.transform = `translateX(-100%)`;
-        }, 800);
-    }
+  if (currentIndex >= totalImages) {
+    setTimeout(() => {
+      carousel.style.transition = "none";
+      currentIndex = 0;
+      carousel.style.transform = `translateX(-100%)`;
+    }, 800);
+  }
 
-    resetAutoSlide();
+  resetAutoSlide();
 }
 
 function prevImage() {
-    currentIndex--;
-    updateCarousel();
+  currentIndex--;
+  updateCarousel();
 
-    if (currentIndex < 0) {
-        setTimeout(() => {
-            carousel.style.transition = 'none';
-            currentIndex = totalImages - 1;
-            carousel.style.transform = `translateX(-${totalImages * 100}%)`;
-        }, 800);
-    }
+  if (currentIndex < 0) {
+    setTimeout(() => {
+      carousel.style.transition = "none";
+      currentIndex = totalImages - 1;
+      carousel.style.transform = `translateX(-${totalImages * 100}%)`;
+    }, 800);
+  }
 
-    resetAutoSlide();
+  resetAutoSlide();
 }
 
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextImage, 6000); 
+  autoSlideInterval = setInterval(nextImage, 4000);
 }
 
 function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
 }
 
 loadImages();
 startAutoSlide();
-nextButton.addEventListener('click', nextImage);
-prevButton.addEventListener('click', prevImage);
+nextButton.addEventListener("click", nextImage);
+prevButton.addEventListener("click", prevImage);
 
 
-
-
-// code for counter updatation
+/* Counter clock code */
 const conferenceDate = new Date('2026-01-01T00:00:00').getTime();
 
 function updateCountdown() {
@@ -119,22 +136,3 @@ function updateCountdown() {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown(); 
-
-// Toggle navbar open/close
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
-
-// Close navbar when clicking outside
-document.addEventListener('click', (event) => {
-  if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
-    navLinks.classList.remove('show');
-  }
-});
-
-// Close navbar on Escape key press
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    navLinks.classList.remove('show');
-  }
-});
