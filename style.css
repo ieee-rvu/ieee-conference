@@ -11,7 +11,9 @@ body {
 
 /* Logo and text */
 .logo-text {
-  padding: 0px 100px;
+  /* without padding looks better */
+  /* padding: 0px 100px; */
+  margin: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,9 +83,10 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  border: 1px solid #1F2D36;
-  border-radius: 5px;
-  padding: 4px 6px;
+  /*  Not required as we need strict borders */
+  /* border: 1px solid #1F2D36;
+  border-radius: 5px; */
+  padding: 10px 10px;
   transition: 0.2s ease-out;
   font-weight: 500;
 }
@@ -92,7 +95,7 @@ body {
 }
 .navbar-links .nav-item a:hover {
   background: #D5B173;
-  color: white;
+  color: black;
 }
 
 /* Banner and Buttons */
@@ -134,7 +137,8 @@ body {
   box-shadow: 0 8px 32px 0 rgba(255, 187, 0, 0.37);
   backdrop-filter: blur( 10px );
   -webkit-backdrop-filter: blur( 10px );
-  border-radius: 10px;
+  /* Reduced to 2 pixels to make it strict */
+  border-radius: 2px;
   border: 1px solid rgba( 255, 255, 255, 0.10 );
 }
 .banner-imgs {
@@ -144,9 +148,9 @@ body {
   width: 82%;
   margin-top: 20px;
   text-align: center;
-
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 32px 0 rgba(255, 187, 0, 0.37);
+  color:black;
+  /* background: rgba(255, 255, 255, 0.7); */
+  /* box-shadow: 0 8px 32px 0 rgba(255, 187, 0, 0.37); */
   backdrop-filter: blur( 10px );
   -webkit-backdrop-filter: blur( 10px );
   border-radius: 10px;
@@ -166,7 +170,6 @@ body {
   height: 50px;
   font-weight: 700;
   border: 2px solid black;
-  border-radius: 10px;
   background-color: #cbaa67;
 }
 
@@ -299,9 +302,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1260px) {
-  .logo-text {
+  /* .logo-text {
     padding: 0px 50px;
-  }
+  } */
   .rvu-logo {
     width: 200px;
   }
