@@ -15,89 +15,83 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-
-
-/* Image Carousel code */
+/* Image Carousel */
 const carousel = document.querySelector(".carousel");
 const nextButton = document.querySelector("#next-button");
 const prevButton = document.querySelector("#prev-button");
 
 const folderPath = "./Images/";
 const imagePrefix = "i";
-const imageExtension = ".jpg";
+const imageExtension = ".webp";
 const totalImages = 5;
 
 let currentIndex = 0;
 let autoSlideInterval;
+const slideDuration = 4000;
+const transitionTime = 500;
+
+// Preload images for smoother transitions
+function preloadImages() {
+  for (let i = 1; i <= totalImages; i++) {
+    const img = new Image();
+    img.src = `${folderPath}${imagePrefix}${i}${imageExtension}`;
+  }
+}
 
 function loadImages() {
   const fragment = document.createDocumentFragment();
+  
+  // Create the loop effect by appending first and last images
+  const imageElements = [totalImages, ...Array.from({ length: totalImages }, (_, i) => i + 1), 1];
 
-  const lastImage = document.createElement("img");
-  lastImage.src = `${folderPath}${imagePrefix}${totalImages}${imageExtension}`;
-  lastImage.alt = "IEEE SB images"
-  lastImage.style.width = "100%";
-  lastImage.style.objectFit = "cover";
-  fragment.appendChild(lastImage);
-
-  for (let i = 1; i <= totalImages; i++) {
+  imageElements.forEach(num => {
     const img = document.createElement("img");
-    img.src = `${folderPath}${imagePrefix}${i}${imageExtension}`;
+    img.src = `${folderPath}${imagePrefix}${num}${imageExtension}`;
+    img.alt = `Image ${num}`;
     img.style.width = "100%";
     img.style.objectFit = "cover";
     fragment.appendChild(img);
-  }
-
-  const firstImage = document.createElement("img");
-  firstImage.src = `${folderPath}${imagePrefix}1${imageExtension}`;
-  firstImage.alt = "IEEE SB images"
-  firstImage.style.width = "100%";
-  firstImage.style.objectFit = "cover";
-  fragment.appendChild(firstImage);
+  });
 
   carousel.appendChild(fragment);
-
   carousel.style.transform = `translateX(-100%)`;
 }
 
-function updateCarousel() {
-  const offset = -(currentIndex + 1) * 100;
-  carousel.style.transition = "transform 0.8s ease-in-out";
+function updateCarousel(offset) {
+  carousel.style.transition = `transform ${transitionTime}ms ease-in-out`;
   carousel.style.transform = `translateX(${offset}%)`;
 }
 
 function nextImage() {
   currentIndex++;
-  updateCarousel();
+  updateCarousel(-100 * (currentIndex + 1));
 
   if (currentIndex >= totalImages) {
     setTimeout(() => {
       carousel.style.transition = "none";
       currentIndex = 0;
       carousel.style.transform = `translateX(-100%)`;
-    }, 800);
+    }, transitionTime);
   }
-
   resetAutoSlide();
 }
 
 function prevImage() {
   currentIndex--;
-  updateCarousel();
+  updateCarousel(-100 * (currentIndex + 1));
 
   if (currentIndex < 0) {
     setTimeout(() => {
       carousel.style.transition = "none";
       currentIndex = totalImages - 1;
       carousel.style.transform = `translateX(-${totalImages * 100}%)`;
-    }, 800);
+    }, transitionTime);
   }
-
   resetAutoSlide();
 }
 
 function startAutoSlide() {
-  autoSlideInterval = setInterval(nextImage, 4000);
+  autoSlideInterval = setInterval(nextImage, slideDuration);
 }
 
 function resetAutoSlide() {
@@ -105,11 +99,13 @@ function resetAutoSlide() {
   startAutoSlide();
 }
 
+// Initialize the carousel
+preloadImages();
 loadImages();
 startAutoSlide();
+
 nextButton.addEventListener("click", nextImage);
 prevButton.addEventListener("click", prevImage);
-
 
 /* Counter clock code */
 const conferenceDate = new Date('2026-01-01T00:00:00').getTime();
