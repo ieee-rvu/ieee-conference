@@ -19,10 +19,10 @@ body {
   align-items: center;
 }
 .rvu-logo {
-  width: 250px;
+  width: 190px;
 }
 .rvu-ieee-logo {
-  width: 140px;
+  width: 100px;
 }
 .right_logo {
   display: flex;
@@ -103,9 +103,10 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  height: 595px;
-  background-image: url("./Images/rvu_banner.webp");
+  height: 567px;
+  background-image: url("./Images/rvu_banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,7 +139,8 @@ body {
   backdrop-filter: blur( 10px );
   -webkit-backdrop-filter: blur( 10px );
   /* Reduced to 2 pixels to make it strict */
-  border-radius: 2px;
+  border-radius: 10px;
+  padding: 20px;
   border: 1px solid rgba( 255, 255, 255, 0.10 );
 }
 .banner-imgs {
@@ -804,7 +806,8 @@ body {
   content: "";
   position: absolute;
   width: 50%;
-  border: solid orangered;
+  /* border: solid orangered; */
+  border: solid #cbaa67;
 }
 
 /* Setting the border of top, bottom, left */
@@ -863,7 +866,8 @@ body {
 
 /* Title of the card */
 .title {
-  color: orangered;
+  /* color: orangered; */
+  color: #cbaa67;
   position: relative;
 }
 
@@ -875,7 +879,8 @@ body {
   height: 10px;
   background: white;
   border-radius: 999px;
-  border: 3px solid orangered;
+  /* border: 3px solid orangered; */
+  border: 3px solid #cbaa67;
 }
 
 /* text right if the card is even  */
