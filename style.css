@@ -919,3 +919,23 @@ body {
   margin-top: 3px;
   text-align: center;
 }
+
+/* pages that have no info */
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Adjust the height based on your preference */
+  text-align: center;
+}
+
+.update-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Use the color scheme from your theme */
+  background-color: #f4f4f4; /* Background color to match your design */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
