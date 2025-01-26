@@ -19,10 +19,10 @@ body {
   align-items: center;
 }
 .rvu-logo {
-  width: 190px;
+  width: 100px;
 }
 .rvu-ieee-logo {
-  width: 100px;
+  width: 50px;
 }
 .right_logo {
   display: flex;
@@ -30,12 +30,12 @@ body {
   align-items: center;
 }
 .main-tagline {
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: 700;
   color: #333;
 }
 .tagline {
-  font-size: 0.8em;
+  font-size: 0.5em;
   color: #555;
   font-weight: 600;
 }
@@ -105,7 +105,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 567px;
+  height: 617px;
   background-image: url("./Images/rvu_banner.webp");
   background-size: cover;
   background-position: center;
@@ -147,8 +147,13 @@ body {
   width: 80%;
 }
 .intro-box {
-  width: 82%;
-  margin-top: 20px;
+  width: 99%;
+  height: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  /* align-items: start; */
   text-align: center;
   color:black;
   /* background: rgba(255, 255, 255, 0.7); */
@@ -161,15 +166,28 @@ body {
 .main-heading {
   font-size: 3em;
 }
+
+.intro-box-buttons {
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: start;
+  margin-top: 40px;
+}
+
 .btns {
   padding: 20px 0px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: none;
 }
 .btn {
-  width: 20%;
+  margin: 10px;
+  width: 170px;
   height: 50px;
+  /* padding: 10px;  */
   font-weight: 700;
   border: 2px solid black;
   background-color: #cbaa67;
@@ -778,9 +796,10 @@ body {
 
 /* Timeline Container */
 .timeline {
+  font-size: 10px;  
   /* background: var(--primary-color); */
-  margin: 20px auto;
-  padding: 20px;
+  margin: 20px;
+  padding: 0px;
   /* justify-self: center; */
   justify-content: center;
   align-items: center;
@@ -790,16 +809,17 @@ body {
 /* Card container */
 .card1 {
   position: relative;
-  max-width: 400px;
+  max-width: 200px;
+  min-width: 220px;
   
 }
 
 /* setting padding based on even or odd */
 .card1:nth-child(odd) {
-  padding: 30px 0 30px 30px;
+  padding: 20px 0 20px 20px;
 }
 .card1:nth-child(even) {
-  padding: 30px 30px 30px 0;
+  padding: 20px 20px 20px 0;
 }
 /* Global ::before */
 .card1::before {
@@ -884,20 +904,27 @@ body {
 }
 
 /* text right if the card is even  */
-.card1:nth-child(even) > .info > .title {
+/* .card1:nth-child(even) > .info > .title {
   text-align: right;
-}
+} */
 
 /* setting dot to the left if the card is odd */
 .card1:nth-child(odd) > .info > .title::before {
-  left: -45px;
+  left: -35px;
 }
 
 /* setting dot to the right if the card is odd */
 .card1:nth-child(even) > .info > .title::before {
-  right: -45px;
+  right: -33px;
 }
 
+.conference-brief h1{
+}
+
+.conference-brief p{
+  padding: 10px;
+  font-size: 1.1em;
+}
 
 .footer {
   background-color: #1F2D36;
