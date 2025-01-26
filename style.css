@@ -619,6 +619,20 @@ body {
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
+.card-description {
+  position: relative; /* Ensure this element is positioned */
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  justify-content: center; /* Center text vertically */
+  align-items: center; /* Center text horizontally */
+  text-align: center; /* Center align text content */
+  width: 100%; /* Ensure it spans the parent */
+  height: 100%; /* Ensure it spans the parent */
+  margin: 0 auto; /* Center it within its container */
+}
+
+
+
 /* Desktop or full-screen mode */
 @media (min-width: 1024px) {
   .committee-button {
