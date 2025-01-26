@@ -620,15 +620,15 @@ body {
 }
 
 .card-description {
-  position: relative; /* Ensure this element is positioned */
+  position: relative; 
   display: flex;
-  flex-direction: column; /* Stack text vertically */
-  justify-content: center; /* Center text vertically */
-  align-items: center; /* Center text horizontally */
-  text-align: center; /* Center align text content */
-  width: 100%; /* Ensure it spans the parent */
-  height: 100%; /* Ensure it spans the parent */
-  margin: 0 auto; /* Center it within its container */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  width: 100%;
+  height: 100%; 
+  margin: 0 auto; 
 }
 
 
