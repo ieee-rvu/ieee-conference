@@ -500,6 +500,7 @@ body {
     left: 0;
     padding: 10px;
     z-index: 1000;
+    font-size: small;
   }
   .nav-rvu-ieee-text > .main-tagline, .tagline {
     color: white;
@@ -766,6 +767,9 @@ body {
   margin: 0 auto; 
 }
 
+.committee-link{
+  text-decoration: none;
+}
 
 
 /* Desktop or full-screen mode */
