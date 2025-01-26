@@ -829,6 +829,46 @@ body {
   max-width: 1200px; /* Limit the maximum width of the gallery */
 }
 
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Add spacing between buttons */
+  margin: 1rem; /* Add margin around the container */
+}
+
+.committee-button {
+  width: 100%; /* Ensure buttons stretch to fit their grid cell */
+  height: 60px; /* Fixed height for all buttons */
+  display: flex; /* Center align the text */
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remove extra padding */
+  font-size: 12px; /* Uniform font size */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust grid for medium screens */
+    gap: 1rem; /* Reduce gap for better spacing */
+  }
+}
+
+@media (max-width: 575px) {
+  .button-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem; /* Reduce gap further for compactness */
+  }
+
+  .committee-button {
+    font-size: 9px; /* Adjust font size for small screens */
+  }
+}
+
+
 /* Card styles */
 .card {
   display: flex;
