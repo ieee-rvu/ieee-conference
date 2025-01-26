@@ -994,3 +994,26 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.table-container {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px; 
+  padding: 20px;
+  background-color: #222D35;
+  border-radius: 5px;
+}
+
+.table-cell {
+  color: #ffffff;
+  padding: 10px; 
+  border: 1px solid #D5B173; 
+  border-radius: 5px; 
+  text-align: center; 
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 50px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+}
