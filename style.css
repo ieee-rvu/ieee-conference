@@ -44,7 +44,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #1F2D36;
+  background-color: #1f2d36;
   color: white;
   padding: 10px 120px;
   position: sticky;
@@ -89,11 +89,11 @@ body {
   width: 100%;
 }
 .navbar-links .nav-item a:hover {
-  background: #D5B173;
+  background: #d5b173;
   color: black;
 }
 
-/* Banner and Buttons */
+/* Banner */
 .banner {
   width: 100%;
   padding: 20px;
@@ -107,11 +107,11 @@ body {
   width: 100%;
   height: 100%;
   color: black;
-  
-  background: rgba(255, 255, 255,0.5);
+
+  background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px 0 rgba(255, 187, 0, 0.4);
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 100px );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -124,6 +124,9 @@ body {
   padding: 10px;
   grid-column: 1/2;
   grid-row: 1/2;
+}
+.abt-para{
+  font-weight: 600;
 }
 .submit-form {
   grid-column: 2/3;
@@ -147,7 +150,7 @@ body {
   background-color: #cbaa67;
 }
 
-/* 📌📌 Timeline */
+/* Homepage Timeline */
 .timeline-layout {
   width: 100%;
   padding: 10px;
@@ -157,7 +160,7 @@ body {
 .timeline {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: first baseline;
   margin-top: 30px;
 }
@@ -165,8 +168,8 @@ body {
   width: 90%;
   margin-top: 5px;
   height: 5px;
-  z-index: 10000;
-  background-color: #cbaa67;
+  z-index: 100;
+  background-color: #222d35;
   position: absolute;
 }
 .timeline-card {
@@ -181,9 +184,10 @@ body {
   width: 16px;
   height: 16px;
   background-color: #cbaa67;
+  border: 2px solid #222d35;
   border-radius: 50%;
   margin-bottom: 10px;
-  z-index: 2;
+  z-index: 200;
 }
 .timeline-info {
   background: white;
@@ -193,7 +197,8 @@ body {
   border: 1px solid #cbaa67;
   width: 100%;
   font-size: 14px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
 }
 .timeline-title {
   color: #cbaa67;
@@ -271,10 +276,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-
-
 }
-
 .logo-layout {
   width: 100%;
   height: auto;
@@ -287,7 +289,7 @@ body {
 }
 .logo-layout > div {
   display: flex;
-  gap: 20px
+  gap: 20px;
 }
 .logo-box {
   width: 300px;
@@ -300,11 +302,11 @@ body {
 
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 32px 0 rgba(255, 187, 0, 0.37);
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 10px );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 20px;
-  border: 1px solid rgba( 255, 255, 255, 0.10 );
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .banner-imgs {
   width: 80%;
@@ -315,13 +317,13 @@ body {
   margin: 20px;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   text-align: center;
-  color:black;
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 10px );
+  color: black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.10 );
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .main-heading {
   font-size: 3em;
@@ -346,11 +348,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   padding: 20px 0px;
 }
 .img-carousel > h1 {
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 .carousel-container {
   width: 80%;
@@ -378,7 +380,7 @@ body {
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
   padding: 10px 18px;
@@ -422,7 +424,10 @@ body {
   text-transform: uppercase;
   margin-top: 5px;
 }
-#days, #hours, #minutes, #seconds {
+#days,
+#hours,
+#minutes,
+#seconds {
   color: #ffffff;
   font-weight: bold;
   font-size: 2rem;
@@ -512,7 +517,7 @@ body {
     width: 100%;
     display: none;
     flex-direction: column;
-    background-color: #1F2D36;
+    background-color: #1f2d36;
     padding: 10px 0;
     position: absolute;
     top: 100%;
@@ -527,7 +532,7 @@ body {
     margin: 5px 0;
   }
   .nav-rvu-ieee-text {
-    display: unset; 
+    display: unset;
   }
   .nav-rvu-ieee-text > .main-tagline, .tagline {
     color: white;
@@ -545,26 +550,19 @@ body {
   .rvu-ieee-text {
     display: none;
   }
-
-  /* .banner {
-    height: 700px;
-  } */
   .logo-layout > div {
     flex-direction: column;
-  } 
+  }
   .logo-box {
     width: 220px;
     height: 120px;
   }
-
   .banner-imgs {
     width: 60%;
   }
-  
   .main-heading {
     font-size: auto;
   }
-
   .btns {
     width: 100%;
     justify-content: center;
@@ -572,12 +570,10 @@ body {
     flex-direction: column;
     gap: 10px;
   }
-
   .btn {
     width: 80%;
   }
-  
-   .countdown {
+  .countdown {
     gap: 15px;
     padding: 15px;
   }
@@ -587,30 +583,24 @@ body {
   .countdown-item .labels {
     font-size: 0.8rem;
   }
-
   .important-dates-box {
     padding: 20px;
   }
-
   .important-dates-box b {
     font-size: 1.3rem;
   }
-
   .important-dates-box .title1 {
     font-size: 1rem;
   }
-
   .important-dates-box ul {
     padding-left: 15px;
   }
-
   .important-dates-box li {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 560px) {
-
   /* .banner {
     display: flex;
     justify-content: center;
@@ -620,241 +610,208 @@ body {
   .logo-layout {
     display: none;
   }
-
   .intro-box {
     padding: 10px;
   }
-
   .intro-box > h1, h2 {
     margin-top: 5px;
   }
-
   .main-heading {
     font-size: 1.5em;
   }
-
   .intro-box > h2 {
     font-size: 1em;
   }
-
-  /* .btns {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-  } */
-
   .btn {
     width: 80%;
   }
-
   .countdown {
     width: 80%;
     flex-wrap: wrap;
     gap: 5px;
   }
-
   .countdown-item {
     flex: 1 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
   }
-
   .countdown-item span:first-child {
     font-size: 1.2rem;
   }
-
   .countdown-item .labels {
     font-size: 0.7rem;
   }
-
   .important-dates-box {
     padding: 20px;
   }
-
   .important-dates-box b {
     font-size: 1.2rem;
   }
-
   .important-dates-box .title1 {
     font-size: 0.9rem;
   }
-
   .important-dates-box ul {
     padding-left: 10px;
   }
-
   .important-dates-box li {
     font-size: 0.8rem;
   }
-} 
+}
 
 /* Committee Page Styles */
 .committee-section {
-  text-align: center; 
-  margin: 0 auto; 
-  max-width: 800px; 
-  margin-top: 40px; 
-  margin-bottom: 25px; 
-  position: relative; 
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  position: relative;
   padding: 20px;
-  border-radius: 10px; 
+  border-radius: 10px;
 
-  /* Rounded corners for the section */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  color: white; /* Default text color for the section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white; 
 }
 .tracks-heading {
-  font-size: 2.5rem; 
-  font-weight: bold; 
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 30px;
-  color: #1F2D36;;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  color: #1f2d36;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
-
-.committee-heading{
-  font-size: 2.5rem; 
-  font-weight: bold; 
-  margin-bottom: 30px; 
-  color: #cbaa67; 
+.committee-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #cbaa67;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .button-container {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: 20px; 
-  justify-items: center; 
-  align-items: center; 
-  max-width: 800px; 
-  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 /* Style for the buttons */
 .committee-button {
-  width: 80%; /* Dynamic width based on screen size */
-  max-width: 300px; /* Optional: Limit maximum width */
-  height: auto; /* Let height adjust automatically for aspect ratio */
-  aspect-ratio: 5 / 2; /* Maintain rectangular ratio */
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 5 / 2;
   background-color: #1f2d36;
   color: white;
   border: none;
-  font-size: 18px; /* Text size */
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 5px; /* Less rounded for a boxy look */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 /* Hover effect for committee buttons */
 .committee-button:hover {
-  background-color: #456485; /* Darker blue on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  background-color: #456485;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
 }
-
 .card-description {
-  position: relative; 
+  position: relative;
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
-  height: 100%; 
-  margin: 0 auto; 
+  height: 100%;
+  margin: 0 auto;
 }
-
-.committee-link{
+.committee-link {
   text-decoration: none;
 }
-
 
 /* Desktop or full-screen mode */
 @media (min-width: 1024px) {
   .committee-button {
-    width: 300px; /* Increase width slightly for larger screens */
-    height: auto; /* Maintain aspect ratio */
-    font-size: 20px; /* Larger font size for better visibility */
-    padding: 15px; /* Increase padding for a spacious look */
+    width: 300px;
+    height: auto;
+    font-size: 20px;
+    padding: 15px;
   }
-
   .button-container {
-    gap: 15px; /* Add spacing between buttons on desktop */
+    gap: 15px;
   }
 }
 
 @media (max-width: 768px) {
   .committee-section {
-    margin-top: 18px; /* Increase margin for smaller screens if navbar height increases */
+    margin-top: 18px;
   }
-
   .committee-heading {
-    font-size: 1.8rem; /* Smaller font size for heading */
+    font-size: 1.8rem;
   }
-
   .button-container {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
-    gap: 10px; /* Add some spacing between buttons */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
-
   .committee-button {
-    width: 90%; /* Full-width buttons with slight padding */
-    max-width: 300px; /* Optional: Limit maximum width for larger phones */
-    height: auto; /* Let height adjust automatically */
-    font-size: 16px; /* Slightly smaller font */
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .committee-section {
-    margin-top: 20px; /* Further adjust margin for very small screens */
-    padding: 10px; /* Reduce padding for smaller screens */
+    margin-top: 20px;
+    padding: 10px;
   }
-
   .committee-heading {
-    font-size: 1.6rem; /* Further reduce font size for very small screens */
+    font-size: 1.6rem;
   }
-
   .committee-button {
-    width: 100%; /* Buttons take full width of the screen */
-    max-width: 280px; /* Optional: Prevent excessive button size */
-    height: auto; /* Let height adjust based on width */
-    font-size: 14px; /* Smaller button font size */
-    padding: 8px; /* Reduce padding for a cleaner look */
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    font-size: 14px;
+    padding: 8px;
   }
 }
 
-/* each commitee page css */
 /* Image gallery layout */
 .image-gallery {
-  display: flex; /* Flexbox for arranging cards in a row */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  gap: 2rem; /* Space between cards */
-  justify-content: center; /* Center cards horizontally */
-  margin: 2rem auto; /* Add spacing around the gallery */
-  max-width: 1200px; /* Limit the maximum width of the gallery */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
-
 .button-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
-  gap: 1.5rem; /* Add spacing between buttons */
-  margin: 1rem; /* Add margin around the container */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  );
+  gap: 1.5rem;
+  margin: 1rem;
 }
-
 .committee-button {
-  width: 100%; /* Ensure buttons stretch to fit their grid cell */
-  height: 60px; /* Fixed height for all buttons */
-  display: flex; /* Center align the text */
+  width: 100%;
+  height: 60px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0; /* Remove extra padding */
-  font-size: 12px; /* Uniform font size */
+  padding: 0;
+  font-size: 12px;
   border: none;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px;
   box-sizing: border-box;
   cursor: pointer;
   text-decoration: none;
@@ -862,30 +819,31 @@ body {
 
 @media (max-width: 768px) {
   .button-container {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust grid for medium screens */
-    gap: 1rem; /* Reduce gap for better spacing */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(120px, 1fr)
+    );
+    gap: 1rem;
   }
 }
 
 @media (max-width: 575px) {
   .button-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem; /* Reduce gap further for compactness */
+    gap: 0.75rem;
   }
-
   .committee-button {
-    font-size: 9px; /* Adjust font size for small screens */
+    font-size: 9px;
   }
 }
-
 
 /* Card styles */
 .card {
   display: flex;
-  align-items: center; /* Center items vertically within the card */
-  flex-direction: row; /* Align image and text side by side */
-  max-width: 44rem; /* Maximum card width */
-  width: 100%; /* Full width of container */
+  align-items: center;
+  flex-direction: row;
+  max-width: 44rem;
+  width: 100%;
   background-color: #fff;
   padding: 1rem;
   border-radius: 0.625rem;
@@ -893,36 +851,28 @@ body {
   gap: 1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-/* Card hover effect */
 .card:hover {
-  transform: scale(1.02); /* Slightly enlarge the card on hover */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: scale(1.02);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
-/* Card image styles */
 .card img {
-  width: 10rem; /* Image width (160px) */
-  height: 10rem; /* Image height matches width for circular shape */
-  border-radius: 50%; /* Make the image circular */
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
   margin-right: 0.8rem;
-  border: 3px solid #ddd; /* Light border around the image */
+  border: 3px solid #ddd;
 }
-
-/* Card description styles */
 .card-description {
   display: flex;
-  flex-direction: column; /* Stack text vertically */
-  justify-content: center; /* Center text vertically */
+  flex-direction: column;
+  justify-content: center;
 }
-
 .card-description h3 {
   margin: 0;
   font-size: 1.6rem;
   font-weight: bold;
   color: black;
 }
-
 .card-description p {
   font-size: 1rem;
   color: #555;
@@ -933,241 +883,106 @@ body {
 /* Responsive design for tablets and smaller screens */
 @media (max-width: 768px) {
   .card {
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center-align content */
-    text-align: center; /* Center-align text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-
   .card img {
-    margin-right: 0; /* Remove right margin when stacked vertically */
-    margin-bottom: 1rem; /* Add space below the image */
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-
   .card-description h3 {
-    font-size: 1.4rem; /* Slightly smaller heading font size */
+    font-size: 1.4rem;
   }
-
   .card-description p {
-    font-size: 0.9rem; /* Slightly smaller paragraph font size */
+    font-size: 0.9rem;
   }
 }
 
 /* Responsive design for mobile screens */
 @media (max-width: 480px) {
   .image-gallery {
-    gap: 1rem; /* Reduce spacing between cards */
-    padding: 0 1rem; /* Add padding for smaller screens */
+    gap: 1rem;
+    padding: 0 1rem;
   }
-
   .card {
-    padding: 0.8rem; /* Reduce padding inside the card */
+    padding: 0.8rem;
   }
-
   .card img {
-    width: 8rem; /* Smaller image size for mobile screens */
-    height: 8rem; /* Ensure the image stays circular */
+    width: 8rem;
+    height: 8rem;
   }
-
   .card-description h3 {
-    font-size: 1.2rem; /* Reduce heading font size */
+    font-size: 1.2rem;
   }
-
   .card-description p {
-    font-size: 0.8rem; /* Reduce paragraph font size */
+    font-size: 0.8rem;
   }
 }
-.conference-brief p{
+.conference-brief p {
   padding: 10px;
   font-size: 1em;
 }
-
 .footer {
-  background-color: #1F2D36;
+  background-color: #1f2d36;
   padding: 20px;
   color: #cbaa67;
 }
-
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Single column */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Vertically align items */
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
 }
-
 .footer-copyright {
-  text-align: center; /* Center the text */
+  text-align: center;
 }
-
 .footer-copyright p {
-  margin: 0; /* Remove default paragraph margins */
+  margin: 0;
 }
 
 /* Media query (optional - if you need different styling on smaller screens) */
 @media (max-width: 768px) {
   .footer-copyright p {
-      font-size: 0.9em; /* Example: slightly smaller font on small screens */
+    font-size: 0.9em;
   }
 }
 
 /* pages that have no info */
-
 .centered-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh; /* Adjust the height based on your preference */
+  height: 60vh;
   text-align: center;
 }
-
 .update-message {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333; /* Use the color scheme from your theme */
-  background-color: #f4f4f4; /* Background color to match your design */
+  color: #333;
+  background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .table-container {
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-  gap: 20px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   padding: 20px;
-  background-color: #222D35;
+  background-color: #222d35;
   border-radius: 5px;
 }
-
 .table-cell {
   color: #ffffff;
-  padding: 10px; 
-  border: 1px solid #D5B173; 
-  border-radius: 5px; 
-  text-align: center; 
+  padding: 10px;
+  border: 1px solid #d5b173;
+  border-radius: 5px;
+  text-align: center;
   font-size: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-height: 50px; 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: flex-start; 
-}
-.timeline {
-  font-size: 14px;  
-  /* background: var(--primary-color); */
-  /* justify-self: center; */
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-/* Card container */
-.card1 {
-  position: relative;
-  max-width: 200px;
-  min-width: 220px;
-  
-}
-
-/* setting padding based on even or odd */
-.card1:nth-child(odd) {
-  padding: 20px 0 20px 20px;
-}
-.card1:nth-child(even) {
-  padding: 20px 20px 20px 0;
-}
-/* Global ::before */
-.card1::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  /* border: solid orangered; */
-  border: solid #cbaa67;
-}
-
-/* Setting the border of top, bottom, left */
-.card1:nth-child(odd)::before {
-  left: 0px;
-  top: -4.5px;
-  bottom: -4.5px;
-  border-width: 5px 0 5px 5px;
-  border-radius: 50px 0 0 50px;
-}
-
-/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
-@media only screen and (max-width: 400px) {
-  .card1:nth-child(odd)::before {
-    top: -5px;
-    bottom: -5px;
-  }
-}
-
-/* Setting the border of top, bottom, right */
-.card1:nth-child(even)::before {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-width: 5px 5px 5px 0;
-  border-radius: 0 50px 50px 0;
-}
-
-/* Removing the border if it is the first card */
-.card1:first-child::before {
-  border-top: 0;
-  border-top-left-radius: 0;
-}
-
-/* Removing the border if it is the last card  and it's odd */
-.card1:last-child:nth-child(odd)::before {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-}
-
-/* Removing the border if it is the last card  and it's even */
-.card1:last-child:nth-child(even)::before {
-  border-bottom: 0;
-  border-bottom-right-radius: 0;
-}
-
-/* Information about the timeline */
-.info {
+  min-height: 50px;
   display: flex;
   flex-direction: column;
-  background: white;
-  color: gray;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-/* Title of the card */
-.title {
-  /* color: orangered; */
-  color: #cbaa67;
-  position: relative;
-}
-
-/* Timeline dot  */
-.title::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 999px;
-  /* border: 3px solid orangered; */
-  border: 3px solid #cbaa67;
-}
-
-/* text right if the card is even  */
-/* .card1:nth-child(even) > .info > .title {
-  text-align: right;
-} */
-
-/* setting dot to the left if the card is odd */
-.card1:nth-child(odd) > .info > .title::before {
-  left: -35px;
-}
-
-/* setting dot to the right if the card is odd */
-.card1:nth-child(even) > .info > .title::before {
-  right: -33px;
+  justify-content: flex-start;
 }
