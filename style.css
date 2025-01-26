@@ -17,10 +17,10 @@ body {
   align-items: center;
 }
 .rvu-logo {
-  width: 100px;
+  width: 200px;
 }
 .rvu-ieee-logo {
-  width: 50px;
+  width: 100px;
 }
 .right_logo {
   display: flex;
@@ -106,12 +106,12 @@ body {
 .inner-banner {
   width: 100%;
   height: 100%;
-  color: white;
+  color: black;
   
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255,0.5);
   box-shadow: 0 8px 32px 0 rgba(255, 187, 0, 0.4);
   backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 100px );
   border-radius: 10px;
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
