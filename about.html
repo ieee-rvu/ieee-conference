@@ -6,6 +6,41 @@
     <title>About</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        background: #D5B173;
+      }
+      .about {
+        background-color: #1F2D36;
+        margin: 1rem 0;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+      }
+      .about h3 {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        margin: 0 0 1rem;
+      }
+      .about h3 .material-icons {
+        color: #4caf50;
+        margin-right: 0.5rem;
+      }
+      .about p {
+        text-align: justify;
+        margin: 1rem 0;
+        line-height: 1.6;
+      }
+    </style>
   </head>
 
   <body>
@@ -56,33 +91,53 @@
       </div>
     </nav>
 
-    <section class="about-section">
-      <h1 style="padding: 10px">About the Conference</h1>
-      <p style="text-align: justify; padding: 10px">
-        The <b>International Conference on Sustainable Technologies</b> focuses
-        on advancements in computing technologies that drive innovation and
-        sustainability. This global event provides a platform for researchers,
-        academicians, industry professionals, and technology enthusiasts to
-        explore the transformative role of computing in addressing modern
-        challenges and shaping a sustainable future. The conference emphasizes
-        areas such as green computing, artificial intelligence, cloud and edge
-        computing, quantum computing, cybersecurity, and sustainable software
-        engineering. It aims to foster collaboration, encourage knowledge
-        sharing, and inspire research that aligns with global sustainability
-        goals. Through keynote speeches from leading experts, technical paper
-        presentations, and interactive sessions, participants will have the
-        opportunity to engage in discussions on cutting-edge research and
-        emerging trends in computing. Join us to explore how futuristic
-        computing technologies can lead us toward a sustainable and innovative
-        tomorrow.
-      </p>
-    </section>
+    <div class="container">
+      <h1 class="about-heading" style="text-align: center;">About the Conference</h1>
+      <div class="about">
+        <h3>
+          Conference Overview
+        </h3>
+        <p>
+          The <b>International Conference on Sustainable Technologies</b> focuses
+          on advancements in computing technologies that drive innovation and
+          sustainability. This global event provides a platform for researchers,
+          academicians, industry professionals, and technology enthusiasts to
+          explore the transformative role of computing in addressing modern
+          challenges and shaping a sustainable future.
+        </p>
+        
+        <p>
+          The conference emphasizes areas such as green computing, artificial
+          intelligence, cloud and edge computing, quantum computing, cybersecurity,
+          and sustainable software engineering. It aims to foster collaboration,
+          encourage knowledge sharing, and inspire research that aligns with global
+          sustainability goals.
+        </p>
+        
+        <p>
+          Through keynote speeches from leading experts, technical paper
+          presentations, and interactive sessions, participants will have the
+          opportunity to engage in discussions on cutting-edge research and
+          emerging trends in computing. Join us to explore how futuristic
+          computing technologies can lead us toward a sustainable and innovative
+          tomorrow.
+        </p>
+      </div>
+    </div>
+
+    <style>
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    </style>
   </body>
   <footer class="footer">
     <div class="footer-grid">
-        <div class="footer-copyright">
-            <p>&copy; IEEE International Conference on Sustainable Technologies, 2025 - 2026</p>
-        </div>
+      <div class="footer-copyright">
+        <p>&copy; IEEE International Conference on Sustainable Technologies, 2025 - 2026</p>
+      </div>
     </div>
   </footer>
 </html>
