@@ -693,9 +693,10 @@ body {
   position: relative; 
   padding: 20px;
   border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  color: white; 
 
+  /* Rounded corners for the section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  color: white; /* Default text color for the section */
 }
 .tracks-heading {
   font-size: 2.5rem; 
@@ -747,6 +748,20 @@ body {
   transform: scale(1.05); /* Slight zoom effect */
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
+
+.card-description {
+  position: relative; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  width: 100%;
+  height: 100%; 
+  margin: 0 auto; 
+}
+
+
 
 /* Desktop or full-screen mode */
 @media (min-width: 1024px) {
@@ -918,23 +933,30 @@ body {
 
 .footer {
   background-color: #1F2D36;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.footer img {
-  height: 70px;
-  width: auto;
-  margin-bottom: 10px;
-}
-
-.footer p {
+  padding: 20px;
   color: #cbaa67;
-  margin-top: 3px;
-  text-align: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Vertically align items */
+}
+
+.footer-copyright {
+  text-align: center; /* Center the text */
+}
+
+.footer-copyright p {
+  margin: 0; /* Remove default paragraph margins */
+}
+
+/* Media query (optional - if you need different styling on smaller screens) */
+@media (max-width: 768px) {
+  .footer-copyright p {
+      font-size: 0.9em; /* Example: slightly smaller font on small screens */
+  }
 }
 
 /* pages that have no info */
@@ -955,4 +977,27 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px; 
+  padding: 20px;
+  background-color: #222D35;
+  border-radius: 5px;
+}
+
+.table-cell {
+  color: #ffffff;
+  padding: 10px; 
+  border: 1px solid #D5B173; 
+  border-radius: 5px; 
+  text-align: center; 
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 50px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
 }
