@@ -1,24 +1,12 @@
 import { roles, CommitteeMembers } from "@/lib/committee-types";
-// Create a mapping between lowercase URLs and enum keys
-export const roleUrlMap = Object.fromEntries(
-  Object.keys(roles).map((key) => [
-    key.toLowerCase(),
-    key as keyof typeof roles,
-  ])
-);
-
 import { CommitteeMemberCard } from "./_components/member-card";
 import { notFound } from "next/navigation";
+import { roleUrlMap } from "@/lib/utils";
 
-interface CommitteePageProps {
-  params: {
-    committee: string;
-  };
-}
-
-export default async function CommitteePage({ params }: CommitteePageProps) {
+export default async function CommitteePage({ params }: { params: Promise<{ committee: string }> }) {
   // Convert URL parameter to proper enum key
-  const committeeKey = roleUrlMap[params.committee];
+  const committee = (await params).committee;
+  const committeeKey = roleUrlMap[committee];
 
   // Handle invalid URLs
   if (!committeeKey) {
