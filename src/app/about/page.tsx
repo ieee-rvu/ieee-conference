@@ -80,10 +80,10 @@ export default function About() {
   ];
 
   return (
-    <div className="absolute inset-0 bg-[#d5b173] overflow-hidden">
+    <div className="absolute inset-0 h-full bg-[#d5b173] overflow-hidden">
       <div className="h-full w-full flex flex-col">
         {/* Header section with fixed height */}
-        <div className="p-4 md:p-8">
+        <div className="p-4 md:p-4">
           <h1 className="text-3xl md:text-4xl font-black text-[#1f2d36] text-center">
             About the Conference
           </h1>

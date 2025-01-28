@@ -1,4 +1,4 @@
-import { roles, CommitteeMember, CommitteeMembers } from '@/lib/committee-types';
+import { roles, CommitteeMembers } from "@/lib/committee-types";
 // Create a mapping between lowercase URLs and enum keys
 export const roleUrlMap = Object.fromEntries(
   Object.keys(roles).map((key) => [
@@ -6,7 +6,6 @@ export const roleUrlMap = Object.fromEntries(
     key as keyof typeof roles,
   ])
 );
-
 
 import { CommitteeMemberCard } from "./_components/member-card";
 import { notFound } from "next/navigation";

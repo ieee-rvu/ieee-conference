@@ -26,9 +26,9 @@ export function Navbar() {
             <p className="text-[10px] sm:text-xs md:text-sm lg:text-base mt-1">
               06-07 November 2025 // Bengaluru, Karnataka, India
             </p>
-            <p className="text-[10px] sm:text-xs md:text-sm lg:text-base">
+            {/* <p className="text-[10px] sm:text-xs md:text-sm lg:text-base">
               Tagline
-            </p>
+            </p> */}
           </div>
 
           <Image

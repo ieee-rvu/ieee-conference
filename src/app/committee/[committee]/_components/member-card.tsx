@@ -1,8 +1,7 @@
 "use client"
 import React from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { CommitteeMember } from '@/lib/committee-types';
 import Image from 'next/image';
@@ -14,11 +13,11 @@ const formatRole = (role: string) => {
 };
 
 export function CommitteeMemberCard ({ member }: { member: CommitteeMember }) {
-  const initials = member.name
-    .split(" ")
-    .map((word) => word[0])
-    .join("")
-    .toUpperCase();
+  // const initials = member.name
+  //   .split(" ")
+  //   .map((word) => word[0])
+  //   .join("")
+  //   .toUpperCase();
 
   return (
     <Card className="w-full max-w-md h-full p-6 flex flex-col gap-3 justify-between">

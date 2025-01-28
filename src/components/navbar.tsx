@@ -22,9 +22,9 @@ export function Navbar() {
           <span className={`text-bold text-[0.6rem] md:text-md lg:text-lg`}>
             06-07 November 2025 // Bengaluru, Karnataka, India
           </span>
-          <span className={`text-bold text-[0.6rem] md:text-md lg:text-lg`}>
+          {/* <span className={`text-bold text-[0.6rem] md:text-md lg:text-lg`}>
             Tagline
-          </span>
+          </span> */}
         </div>
         <Image
           width={200}
