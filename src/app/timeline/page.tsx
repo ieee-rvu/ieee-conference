@@ -116,8 +116,8 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center absolute inset-0 bg-white dark:bg-gray-900 p-6">
-      <div className="max-w-7xl mx-auto">
+    <div className="flex flex-col items-center justify-center h-full overflow-y-scroll absolute inset-0 bg-white dark:bg-gray-900 p-6">
+      <div className="max-w-7xl mx-auto h-full sm:h-fit">
         {/* Timeline container */}
         <div className="lg:flex-row flex flex-col gap-8 lg:gap-4 overflow-x-auto">
           {timelineData.map((item, index) => (

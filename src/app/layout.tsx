@@ -23,7 +23,7 @@ export default function RootLayout({
           </header>
 
           {/* Main content that takes remaining space */}
-          <main className="flex-1 relative">{children}</main>
+          <main className="flex-1 relative min-h-[50vh]">{children}</main>
 
           {/* Footer */}
           <footer className="bg-gray-800 text-white p-4 mt-auto">
