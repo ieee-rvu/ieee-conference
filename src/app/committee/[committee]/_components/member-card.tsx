@@ -7,17 +7,12 @@ import { CommitteeMember } from '@/lib/committee-types';
 import Image from 'next/image';
 
 // Helper function to convert camelCase to Capital Case
-const formatRole = (role: string) => {
-  const result = role.replace(/([A-Z])/g, " $1");
+const formataffiliation = (affiliation: string) => {
+  const result = affiliation.replace(/([A-Z])/g, " $1");
   return result.charAt(0).toUpperCase() + result.slice(1);
 };
 
 export function CommitteeMemberCard ({ member }: { member: CommitteeMember }) {
-  // const initials = member.name
-  //   .split(" ")
-  //   .map((word) => word[0])
-  //   .join("")
-  //   .toUpperCase();
 
   return (
     <Card className="w-full max-w-md h-full p-6 flex flex-col gap-3 justify-between">
@@ -52,25 +47,14 @@ export function CommitteeMemberCard ({ member }: { member: CommitteeMember }) {
         </div>
 
         <div className="space-y-4">
-          <div className="space-y-2">
-            <h4 className="text-sm font-semibold">Qualifications</h4>
-            <div className="flex flex-wrap gap-2">
-              {member.qualifications.map((qual, index) => (
-                <Badge key={index} variant="secondary" className="text-xs">
-                  {qual}
-                </Badge>
-              ))}
-            </div>
-          </div>
-
           <Separator />
 
-          <div className="">
-            <h4 className="text-sm font-semibold">Roles</h4>
+          <div className="pb-3 pt-0">
+            <h4 className="text-sm font-semibold">Affiliations</h4>
             <div className="flex flex-wrap gap-2">
-              {member.role.map((role, index) => (
+              {member.affiliations.map((affiliation, index) => (
                 <Badge key={index} variant="default" className="text-xs">
-                  {formatRole(role)}
+                  {affiliation}
                 </Badge>
               ))}
             </div>

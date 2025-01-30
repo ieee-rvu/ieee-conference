@@ -10,7 +10,7 @@ export function Navbar() {
     <nav className="w-full">
       {/* Top section with logos and title */}
       <div className="w-full bg-white px-4 py-2 md:py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <div className=" mx-auto flex flex-row justify-center gap-2">
           <Image
             width={150}
             height={80}
@@ -19,7 +19,7 @@ export function Navbar() {
             className="h-12 w-auto md:h-16 lg:h-20 object-contain"
           />
 
-          <div className="flex flex-col items-center text-center flex-1 px-2 text-black">
+          <div className="grow flex flex-col items-center justify-center text-center flex-1 px-2 text-black">
             <h1 className="font-black text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl">
               International Conference on Sustainable Technologies
             </h1>
@@ -31,13 +31,22 @@ export function Navbar() {
             </p> */}
           </div>
 
-          <Image
-            width={150}
-            height={80}
-            src="/logo/ieee-logo.webp"
-            alt="IEEE logo"
-            className="h-12 w-auto md:h-16 lg:h-20 object-contain"
-          />
+          <div className={`flex flex-col lg:flex-row items-center justify-end`}>
+            <Image
+              width={150}
+              height={80}
+              src="/logo/ieee-logo.webp"
+              alt="IEEE logo"
+              className="h-16 w-auto md:h-16 lg:h-20 object-contain"
+            />
+            <div
+              className={`hidden lg:flex flex-col text-[0.3rem] md:text-xs lg:text-xs text-black`}
+            >
+              <span>IEEE Student Branch</span>
+              <span>06-07 November 2025 </span>
+              <span>Bengaluru, Karnataka, India</span>
+            </div>
+          </div>
         </div>
       </div>
 
