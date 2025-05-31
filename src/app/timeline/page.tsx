@@ -75,40 +75,47 @@ const TimelineEntry = ({
 export default function Timeline() {
   const timelineData = [
     {
-      date: "5th May '25",
+      date: "1st July '25",
       icon: RocketLaunchIcon,
       content: ["Submission of Full-length Manuscript"],
       color: "#96CEB4",
     },
     {
-      date: "5th July '25",
+      date: "30th August '25",
       icon: BeakerIcon,
       content: ["Last Date to Submit Full-length Manuscript"],
       color: "#FF6B6B",
     },
     {
-      date: "31st August '25",
+      date: "1st December '25",
       icon: BellAlertIcon,
       content: ["Notification of Acceptance"],
       color: "#FFD166",
     },
     {
-      date: "Before 15th September '25",
+      date: "Before 15th December '25",
       icon: BoltIcon,
       content: ["Early Bird Registration"],
       color: "#96CEB4",
     },
     {
-      date: "5th October '25",
+      date: "31st December '25",
       icon: BoltIcon,
       content: [
         "Last Date for Registration",
+      ],
+      color: "#FF6B6B",
+    },
+    {
+      date: "1st January '26",
+      icon: BoltIcon,
+      content: [
         "Submission of Camera-ready Manuscript and Copyright Form:",
       ],
       color: "#FF6B6B",
     },
     {
-      date: "6-7th November '25",
+      date: "5th and 6th March '26",
       icon: BoltIcon,
       content: ["Conference Dates"],
       color: "#45B7D1",
